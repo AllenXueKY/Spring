@@ -24,7 +24,9 @@ public class AccountServiceTest {
     @Autowired
     AccountService as;
 
-
+    /**
+     * 测试查询所有
+     */
     @Test
     public void testFindAll() {
         List<Account> accounts = as.findAllAccount();
@@ -32,11 +34,19 @@ public class AccountServiceTest {
             System.out.println(account);
         }
     }
+
+    /**
+     * 测试查询一个
+     */
     @Test
     public void testFindOne() {
         Account account = as.findAccountById(1);
         System.out.println(account);
     }
+
+    /**
+     * 测试保存
+     */
     @Test
     public void testSave() {
         Account account = new Account();
@@ -44,12 +54,20 @@ public class AccountServiceTest {
         account.setMoney(12345f);
         as.saveAccount(account);
     }
+
+    /**
+     * 测试更新
+     */
     @Test
     public void testUpdate() {
         Account account = as.findAccountById(4);
         account.setMoney(23456f);
         as.updateAccount(account);
     }
+
+    /**
+     * 测试删除
+     */
     @Test
     public void testDelete() {
         as.deleteAccount(4);
