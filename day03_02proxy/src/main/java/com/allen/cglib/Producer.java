@@ -1,7 +1,5 @@
 package com.allen.cglib;
 
-import com.allen.proxy.IProducer;
-
 /**
  * 一个生产者
  */
