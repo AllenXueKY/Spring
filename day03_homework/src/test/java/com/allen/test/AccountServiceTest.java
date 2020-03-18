@@ -23,7 +23,6 @@ import java.util.List;
 public class AccountServiceTest {
 
     @Autowired
-    @Qualifier("proxyAccountService")
     AccountService as;
 
     @Test
