@@ -49,7 +49,7 @@
     <!--配置AOP-->
     <aop:config>
         <!--配置切入点表法式-->
-        <aop:pointcut id="pt1" expression="execution(* com.allen.service.impl.AccountServiceImpl.*(..))"></aop:pointcut>
+        <aop:pointcut id="pt1" expression="execution(* com.allen.service.impl.*.*(..))"></aop:pointcut>
         <!--配置切面-->
         <aop:aspect id="managerAdvice" ref="txManager">
             <!--配置通知-->
